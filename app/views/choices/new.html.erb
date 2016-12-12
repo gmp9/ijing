@@ -1,0 +1,14 @@
+<% content_for :title do %>Consultation<% end %>
+<h4>Consultation</h4>
+<p>To consult the ijing, please enter 'x' in the box.</p>
+
+<%= form_for :choice, url: choices_path do |f| %>
+  <p>
+    <%= f.label :new_gua %>
+    <%= f.text_field :new_gua %>
+  </p>
+   
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

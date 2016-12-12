@@ -1,0 +1,32 @@
+<p>Result of the consultation</p>
+<%= "Initial gua: " %><br>
+<%= @comp_choice.reverse.each do |k,v| %>
+  <%=  k %><br>
+<% end %>
+<br>
+<%= "Final gua: " %><br>
+<% arrayk ||= [] %>
+<% arrayv ||= [] %>
+
+<% for i in 0..5 %>
+  <% arrayk[i] = @comp_choice[i][0] %>
+  <% arrayv[i] = @comp_choice[i][1] %>
+<% end %>
+
+<% for i in 0..5 %>
+  <% if arrayv[i] == 3 %>
+    <% arrayk[i] = "___ ___" %>
+    <% arrayk.reverse.each do |j| %>
+      <%= j %><br>
+    <% end %>  
+    <br>
+  <% elsif arrayv[i] == 4 %>
+    <% arrayk[i] = "_______" %>
+    <% arrayk.reverse.each do |j| %>
+      <%= j %><br>
+    <% end %>
+    <br>
+  <% end %>
+<% end %>
+<br>
+<%= link_to 'back', new_choice_path %> 
