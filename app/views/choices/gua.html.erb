@@ -9,10 +9,13 @@
 <% arrayv ||= [] %>
 
 <% for i in 0..5 %>
+  <%#decouple the hash @comp_choice %>
   <% arrayk[i] = @comp_choice[i][0] %>
   <% arrayv[i] = @comp_choice[i][1] %>
 <% end %>
 
+<%#take care of moving lines in the initial gua %>
+<%#and print each gua as the lines are changing %>
 <% for i in 0..5 %>
   <% if arrayv[i] == 3 %>
     <% arrayk[i] = "___ ___" %>
