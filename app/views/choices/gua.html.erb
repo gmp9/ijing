@@ -8,8 +8,9 @@
 <% arrayk ||= [] %>
 <% arrayv ||= [] %>
 
+<%#decouple the hash @comp_choice %>
+<%#arrayk stores the lines; arrayv stores the numbers %>
 <% for i in 0..5 %>
-  <%#decouple the hash @comp_choice %>
   <% arrayk[i] = @comp_choice[i][0] %>
   <% arrayv[i] = @comp_choice[i][1] %>
 <% end %>
