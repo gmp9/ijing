@@ -1,8 +1,10 @@
 <% content_for :title do %>Consultation<% end %>
 <h4>Consultation</h4>
-<div class="img">
-  <%= image_tag("water2.jpg",style: "height: 410px; width: 275px") %>
-</div>
+
+
+  <%#= image_tag("water2.jpg",style: "height: 410px; width: 275px") %>
+
+
 <p>To consult the ijing, please enter 'x' in the box.</p>
 
 <%= form_for :choice, url: choices_path do |f| %>
